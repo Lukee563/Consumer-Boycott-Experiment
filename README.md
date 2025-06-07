@@ -6,7 +6,8 @@
 This repository includes the analysis of the Consumer Boycott Game
 developed by **Vivian J. Zheng**. The Consumer Boycott Game concept
 originated from Luke Catalano, Sadhika Agrawal and Derek Zhao in
-conjunction with Professor Kristian Lopez Vargas.
+conjunction with Professor Kristian Lopez Vargas @ University of
+California, Santa Cruz.
 
 The Otree code and original documentation for the Consumer Boycott Game
 can be found in Vivian’s Boycott_Consumer Repository, detailing the
