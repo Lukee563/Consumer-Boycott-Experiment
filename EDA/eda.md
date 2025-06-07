@@ -5,11 +5,11 @@
 
 -   Are individuals willing to buy from a more expensive seller if the
     seller is considered ethical compared to an unethical seller
-    offering the same good at a cheaper price.
+    offering the same good at a cheaper price?
 
 -   Do individuals respond to the injuctive norm (a social standard that
     dictates what people believe others approve of or expect them to
-    do).
+    do)?
 
 ## Analysis Objective:
 
