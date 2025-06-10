@@ -10,9 +10,9 @@ editor: visual
 
 -   Do individuals respond to the injuctive norm (a social standard that dictates what people believe others approve of or expect them to do).
 
-## Analysis Objective: 
+## Analysis Objective:
 
--   Using data collected from an experimental pilot session hosted by LEEPS @ UC Santa Cruz on June 4th, 2025, we hope to identify early conclusions to our proposed research questions. Our sample size of 24 and the preliminary nature of this experiment prevent us from establishing causal claims, however, early conclusions to these research questions may guide later iterations of the Consumer Boycott experiment.
+-   Using data collected from an experimental pilot session hosted by LEEPS \@ UC Santa Cruz on June 4th, 2025, we hope to identify early conclusions to our proposed research questions. Our sample size of 24 and the preliminary nature of this experiment prevent us from establishing causal claims, however, early conclusions to these research questions may guide later iterations of the Consumer Boycott experiment.
 
 ## Consumer Boycott - Experiment Data
 
@@ -21,4 +21,22 @@ Read in the experimental data.
 ```{r}
 block1 <- read.csv("data/block1_effort_wage_2025-06-04.csv") # Effort Wage Game
 block2 <- read.csv("data/block2_market_2025-06-04.csv") # Market Game
+```
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+# Step 1: Count how many chose "B" in each treatment group
+b_counts <- block2 %>%
+  filter(player.buyer_choice == "B") %>%
+  group_by(subsession.treatment) %>%
+  summarise(num_B_voters = n())
+
+# Step 2: Plot
+ggplot(b_counts, aes(x = subsession.treatment, y = num_B_voters)) +
+  geom_col(fill = "skyblue", width = 0.5) +  # Adjust width here
+  labs(title = "Number of B Choices per Treatment Group",
+       x = "Treatment Group",
+       y = "Count of B Choices")
 ```
